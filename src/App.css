@@ -1,0 +1,31 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Apply the font globally */
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 75rem;
+    /* padding-top: 4.5rem; */
+}
+.card-img-top{
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+.card-body {
+    width: 100%; /* Ensure the parent has a fixed width */
+}
+.text-overflow-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Corrected typo */
+    -webkit-box-orient: vertical; /* Corrected typo */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text-overflow-1{
+    display:-webkit-box;
+    -webit-line-clamp:1;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
