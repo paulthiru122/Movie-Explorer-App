@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import {useEffect} from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 import { convertMinutes } from '../utiils/utils';
+import Noimage from '../assets/Image-not-found.png'
 
 export const MovieDetails = () => {
   const params = useParams()
@@ -10,12 +11,12 @@ export const MovieDetails = () => {
    const url = `https://api.themoviedb.org/3/movie/${params.id}?api_key=${key}`;
    const image = movie.poster_path
    ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-   : 'https://via.placeholder.com/500x300?text=Image+Not+Found';
+   : Noimage;
 
     useEffect(() => {
       async function fetchMovies() {
         try {
-          const response = await fetch(url); // Await h fe
+          const response = await fetch(url); 
              if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }

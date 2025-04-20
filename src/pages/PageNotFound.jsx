@@ -3,7 +3,7 @@ import notfound from '../assets/404.avif';
 import { Link } from 'react-router-dom';
 
 export const PageNotFound = () => {
-  console.log('Image Path:', notfound); // Debugging the image path
+ 
 
   return (
     <div className="d-flex flex-column align-items-center justify-content-center vh-100">

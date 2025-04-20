@@ -9,8 +9,7 @@ export const Search = ({ apiPath }) => {
   const { data: movies } = useFetch(apiPath, queryTerm);
 
   useEffect(() => {
-    // console.log('Query Term:', queryTerm); // Debugging query term
-    // console.log('Movies:', movies); // Debugging fetched movies
+    
     document.title = `Search results for "${queryTerm}"`;
   }, [queryTerm, movies]);
 

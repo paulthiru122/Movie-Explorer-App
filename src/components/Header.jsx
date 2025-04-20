@@ -6,13 +6,13 @@ export const Header = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log('handleSearch triggered'); // Debugging
+    
     const query = e.target.search.value.trim();
-    console.log('Search Query:', query); // Debugging the query
+    
     if (query) {
       e.target.reset();
       navigator(`/search?q=${query}`);
-      console.log('Navigating to:', `/search?q=${query}`);
+      
     }
   };
 

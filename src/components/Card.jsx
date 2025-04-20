@@ -1,21 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NoImage from '../assets/Image-not-found.png';
 
 export const Card = ({ movie }) => {
   const { poster_path, id, overview, title, vote_average, vote_count } = movie;
 
   const image = poster_path
     ? `https://image.tmdb.org/t/p/w500${poster_path}`
-    : 'https://via.placeholder.com/500';
+    : NoImage;
 
   return (
     <div className="col">
       <div className="card shadow-sm" title={title}>
         <img
           src={image}
-          alt={title}
+          alt={title || 'No Image Available'}
           className="card-img-top"
-          style={{ width: '100%', height: 'auto' }}
+          style={{
+            width: '100%',
+            height: '25rem', // Ensures consistent height for all images
+            objectFit: 'cover', // Ensures the image fits within the container
+          }}
         />
         <div className="card-body">
           <h5 className="card-title text-primary text-overflow-1">{title}</h5>
